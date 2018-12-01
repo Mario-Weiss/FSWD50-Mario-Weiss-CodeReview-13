@@ -34,6 +34,21 @@ class EventController extends Controller
     }
 
     /**
+     * @Route("/event/filter/{cat}", name="event_filter")
+     */
+    public function filterAction($cat, Request $request)
+    {
+        $events = $this->getDoctrine()
+            ->getRepository('AppBundle:Event')
+            ->findBy(array('category' => $cat));
+
+        // Render Template
+        return $this->render('default/index.html.twig', [
+            'events' => $events
+        ]);
+    }
+
+    /**
      * @Route("/event/detail/{id}", name="event_detail")
      */
     public function detailAction($id, Request $request)
