@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="col-12 text-center text-red p-3"><h1>Categories</h1></div>
+
+<div class="card">
+	<div class="card-body">
+		{% for flashMessage in app.session.flashbag.get('notice') %}
+		<div class="alert alert-success">{{flashMessage}}</div>
+		{% endfor %}
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th>Category Name</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+
+				{% for category in categories %}
+				<tr>
+					<td>{{category.name}}</td>
+					<td>
+						<a class="btn btn-primary" href="/category/edit/{{category.id}}" title="">Edit</a>
+						<a class="btn btn-danger" href="/category/delete/{{category.id}}" title="">Delete</a>
+
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{% endblock %}

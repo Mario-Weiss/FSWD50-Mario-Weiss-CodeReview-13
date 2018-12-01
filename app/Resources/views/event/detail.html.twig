@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="col-12 text-center text-red p-3"><h1>{{event.name}}</h1><h4> <small id="details_table">{{event.category.name}}</small></h4></div>
+<div class="col-12 d-flex justify-content-between">
+	<div class="p-3">
+		<h4><small id="details_short_desc">{{event.description}}</small></h4>
+	</div>
+	<div class="p-3">
+		<img id="details_image" class=" d-none d-md-block" src="/../img/{{event.image}}" alt="">
+	</div>
+</div>
+<div class="col-12 p-3">
+	<h4 class="text-red">{{event.locationName}}</h4>
+	<p>{{event.adress}} <br> {{event.zip}} {{event.city}}</p>
+	<h4 class="text-red">Current Date</h4>
+	<p>{{event.day|date('F j, Y, g:i a')}}</p>
+	<h4 class="text-red">Tickets &amp; Info</h4>
+	<p><a href="tel:{{event.phone}}" title=""><i class="fas fa-phone"></i> {{event.phone}}</a><br>
+		<a href="mailto:{{event.email}}" title=""><i class="far fa-envelope"></i> {{event.email}}</a> <br>
+		<a href="{{event.url}}"><i class="fas fa-globe"></i> {{event.url}}</a>
+	</p>
+</div>
+
+{% endblock %}

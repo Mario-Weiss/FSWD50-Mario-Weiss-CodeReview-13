@@ -1,0 +1,27 @@
+header {
+	background:  url('../img/image_header-big.jpg');
+	background-size:  cover;
+	background-position: center;
+	min-height: 30vh;
+}
+a, a:hover {
+	color:  black;
+	text-decoration: none;
+}
+
+
+.bg-red {
+	background-color: #E52236;
+}
+
+.text-red  {
+	color: #E52236;
+	text-decoration-color: #E52236;
+}
+
+#details_image {
+	max-width: 350px;
+	height:  auto;
+}
+
+
