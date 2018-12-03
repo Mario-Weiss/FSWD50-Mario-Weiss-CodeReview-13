@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: null
+    database_name: cr13_mario_weiss_bigevents
+    database_user: username
+    database_password: password
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 3d530f6a7381a55e27a307bbc85257cd39b260ed

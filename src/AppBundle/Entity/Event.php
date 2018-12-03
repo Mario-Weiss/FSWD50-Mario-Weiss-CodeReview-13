@@ -24,7 +24,7 @@ class Event
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="events")
+     * @ORM\ManyToOne(targetEntity="Category")
      */
     private $category;
 
